@@ -22,11 +22,9 @@ public class Person {
         return ToStringBuilder.reflectionToString(this, ToStringStyle.SHORT_PREFIX_STYLE);
     }
 
-
     public int hashCode() {
         return HashCodeBuilder.reflectionHashCode(this);
     }
-
 
     public boolean equals(Object obj) {
         return EqualsBuilder.reflectionEquals(this, obj);
