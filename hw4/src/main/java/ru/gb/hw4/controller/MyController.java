@@ -24,7 +24,7 @@ public class MyController {
         return "indexParam";
     }
 
-    @GetMapping("registrationForm")
+    @GetMapping("/registrationForm")
     public String registrationForm(Model model){
         model.addAttribute("myObject", new User());
         return "RegistrationForm";
