@@ -6,9 +6,10 @@ import org.springframework.web.bind.annotation.*;
 import ru.gb.hw4.model.User;
 
 @Controller
+@RequestMapping("/index")
 public class MyController {
 
-    @GetMapping("index")
+    @GetMapping()
     public String mainPage() {
         return "index";
     }
