@@ -9,7 +9,7 @@
 <!--    <link rel="stylesheet" type="text/css" th:href="@{/style.css}">-->
 <div class="container">
     <h2>Registration Form</h2>
-    <form action="#" th:action="@{/createUser}" th:object="${myObject}" method="post">
+    <form action="#" th:action="@{/index/createUser}" th:object="${myObject}" method="post">
         <div class="form-group">
             <label for="username">Username:</label>
             <input type="text" id="username" th:field="*{name}" required>

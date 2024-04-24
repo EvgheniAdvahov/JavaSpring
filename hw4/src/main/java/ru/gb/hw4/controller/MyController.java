@@ -33,7 +33,7 @@ public class MyController {
     @PostMapping("/createUser")
     public String createUser(User user) {
         System.out.println(user);
-        return "redirect:/registrationForm";
+        return "redirect:registrationForm";
     }
 
 
