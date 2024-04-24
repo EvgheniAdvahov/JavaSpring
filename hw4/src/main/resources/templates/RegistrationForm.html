@@ -6,7 +6,6 @@
     <link href="/css/style.css" rel="stylesheet">
 </head>
 <body>
-<!--    <link rel="stylesheet" type="text/css" th:href="@{/style.css}">-->
 <div class="container">
     <h2>Registration Form</h2>
     <form action="#" th:action="@{/index/createUser}" th:object="${myObject}" method="post">
@@ -24,6 +23,24 @@
         </div>
         <button type="submit">Register</button>
     </form>
+</div>
+<div class="cont">
+    <table class="equal-columns">
+        <thread>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>email</th>
+            </tr>
+        </thread>
+        <tbody>
+        <tr th:each="user : ${users}">
+            <td th:text="${user.name}"></td>
+            <td th:text="${user.age}"></td>
+            <td th:text="${user.email}"></td>
+        </tr>
+        </tbody>
+    </table>
 </div>
 </body>
 </html>

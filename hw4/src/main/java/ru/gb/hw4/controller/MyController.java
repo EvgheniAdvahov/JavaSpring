@@ -28,10 +28,12 @@ public class MyController {
     @GetMapping("/registrationForm")
     public String registrationForm(Model model){
         model.addAttribute("myObject", new User());
+        model.addAttribute("users", User.myUserList);
         return "RegistrationForm";
     }
     @PostMapping("/createUser")
     public String createUser(User user) {
+        User.myUserList.add(user);
         System.out.println(user);
         return "redirect:registrationForm";
     }
