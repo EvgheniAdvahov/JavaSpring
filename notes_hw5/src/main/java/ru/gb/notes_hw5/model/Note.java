@@ -8,7 +8,7 @@ import java.util.Date;
 
 @Data
 @Entity
-@Table(name = "notes")
+@Table(name = "Notes")
 public class Note {
 
     @Id
@@ -17,40 +17,40 @@ public class Note {
     @Column(nullable = false)
     private String description;
 
-    @Enumerated(EnumType.STRING)
-    private myStatus status;
-
-    private Date createdAt;
-
-    private enum myStatus {
-        NOT_STARTED("не начата"),
-        IN_PROGRESS("в процессе"),
-        COMPLETED("завершена");
-
-        private final String noteDescription;
-
-        myStatus(String noteDescription){
-            this.noteDescription = noteDescription;
-        }
-
-        public String getNoteDescription() {
-            return noteDescription;
-        }
-
-    }
-    public void changeStatus(String newStatus) {
-        switch (newStatus.toLowerCase()) {
-            case "не начата":
-                this.status = myStatus.NOT_STARTED;
-                break;
-            case "в процессе":
-                this.status = myStatus.IN_PROGRESS;
-                break;
-            case "завершена":
-                this.status = myStatus.COMPLETED;
-                break;
-            default:
-                throw new IllegalArgumentException("Статус не существует: " + newStatus);
-        }
-    }
+//    @Enumerated(EnumType.STRING)
+//    private myStatus status;
+//
+//    private Date createdAt;
+//
+//    private enum myStatus {
+//        NOT_STARTED("не начата"),
+//        IN_PROGRESS("в процессе"),
+//        COMPLETED("завершена");
+//
+//        private final String noteDescription;
+//
+//        myStatus(String noteDescription){
+//            this.noteDescription = noteDescription;
+//        }
+//
+//        public String getNoteDescription() {
+//            return noteDescription;
+//        }
+//
+//    }
+//    public void changeStatus(String newStatus) {
+//        switch (newStatus.toLowerCase()) {
+//            case "не начата":
+//                this.status = myStatus.NOT_STARTED;
+//                break;
+//            case "в процессе":
+//                this.status = myStatus.IN_PROGRESS;
+//                break;
+//            case "завершена":
+//                this.status = myStatus.COMPLETED;
+//                break;
+//            default:
+//                throw new IllegalArgumentException("Статус не существует: " + newStatus);
+//        }
+//    }
 }

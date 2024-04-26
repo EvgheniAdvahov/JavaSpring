@@ -11,7 +11,7 @@ import java.util.List;
 @Repository
 public interface NoteRepository extends JpaRepository<Note,Long> {
 
-    @Query("SELECT n FROM Note n WHERE n.status = :status")
-    List<Note> findNotesByStatus(String status);
+//    @Query("SELECT n FROM Note n WHERE n.status = :status")
+//    List<Note> findNotesByStatus(String status);
 
 }

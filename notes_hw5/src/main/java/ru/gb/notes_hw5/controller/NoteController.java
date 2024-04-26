@@ -22,7 +22,7 @@ public class NoteController {
 
     @PostMapping("/add")
     public void addNote(@RequestBody Note note){
-        note.setCreatedAt(new Date());
+//        note.setCreatedAt(new Date());
         noteService.createNote(note);
     }
 }
