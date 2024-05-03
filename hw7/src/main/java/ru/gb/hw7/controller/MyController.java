@@ -9,15 +9,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/")
 public class MyController {
 
-//
-//    @GetMapping("/index")
-//    public String index() {
-//        return "redirect:/";
-//    }
-    @GetMapping("/")
+    @GetMapping({"/", "/login","/logout"})
     public String login() {
         return "/login_form";
     }
+
 
     @GetMapping("/public")
     public String user() {

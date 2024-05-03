@@ -19,7 +19,7 @@ public class SecurityConfig {
     SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http
                 .authorizeHttpRequests((authorize) -> authorize
-                        .requestMatchers("/css/**", "/favicon.ico", "/", "/login").permitAll()
+                        .requestMatchers("/css/**", "/favicon.ico", "/").permitAll()
                         .requestMatchers("/public").hasAnyRole("USER")
                         .requestMatchers("/private").hasAnyRole("ADMIN")
                         .anyRequest().authenticated()
@@ -29,7 +29,7 @@ public class SecurityConfig {
                         .defaultSuccessUrl("/public")
                         .permitAll())
                 .logout(logout -> logout
-                        .logoutSuccessUrl("/")
+                        .logoutSuccessUrl("/logout")
                         .permitAll());
         return http.build();
     }
