@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping
+@RequestMapping("/")
 public class MyController {
 
 //
@@ -14,20 +14,18 @@ public class MyController {
 //    public String index() {
 //        return "redirect:/";
 //    }
-
-
-    @GetMapping("/login")
+    @GetMapping("/")
     public String login() {
-        return "login";
+        return "/login_form";
     }
 
     @GetMapping("/public")
     public String user() {
-        return "public-data.html";
+        return "/public-data";
     }
 
     @GetMapping("/private")
     public String admin() {
-        return "private-data";
+        return "/private-data";
     }
 }

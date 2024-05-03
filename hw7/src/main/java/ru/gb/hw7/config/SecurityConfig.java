@@ -29,7 +29,7 @@ public class SecurityConfig {
                         .defaultSuccessUrl("/public")
                         .permitAll())
                 .logout(logout -> logout
-                        .logoutSuccessUrl("/login")
+                        .logoutSuccessUrl("/")
                         .permitAll());
         return http.build();
     }
