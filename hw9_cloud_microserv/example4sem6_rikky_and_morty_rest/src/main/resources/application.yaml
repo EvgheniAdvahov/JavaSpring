@@ -1,0 +1,12 @@
+#param.CHARACTER_API=https://rickandmortyapi.com/api/character/
+param:
+  character-api: https://rickandmortyapi.com/api/character/
+spring:
+  jpa:
+    generate-ddl: false
+    hibernate:
+      ddl-auto: none
+  application:
+    name: MicroserviceRickMorty
+server:
+  port: 8082

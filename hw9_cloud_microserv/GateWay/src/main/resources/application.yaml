@@ -1,0 +1,19 @@
+#spring.application.name=GateWay
+server:
+  port: 8765
+
+
+spring:
+  application:
+    name: GateWay
+  cloud:
+    gateway:
+      routes:
+        - id: MicroserviceNote
+          uri: http://localhost:8081/
+          predicates:
+            - Path=/serviceOne/**
+        - id: MicroserviceRickMorty
+          uri: http://localhost:8082/
+          predicates:
+            - Path=/serviceTwo/**
