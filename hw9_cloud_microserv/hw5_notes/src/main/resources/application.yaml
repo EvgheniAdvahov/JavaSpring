@@ -1,0 +1,13 @@
+#spring.application.name=hw5_note
+#spring.jpa.generate-ddl=false
+#spring.jpa.hibernate.ddl-auto=none
+
+spring:
+  jpa:
+    generate-ddl: false
+    hibernate:
+      ddl-auto: none
+  application:
+    name: MicroserviceNote
+server:
+  port: 8081
